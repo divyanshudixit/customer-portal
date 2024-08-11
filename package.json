@@ -1,6 +1,7 @@
 {
   "name": "customer-portal",
   "version": "0.1.0",
+  "homepage": "https://divyanshudixit.github.io/customer-portal",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
