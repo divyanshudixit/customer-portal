@@ -1,26 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import CustomerList from './components/CustomerList';
+import CustomerDetails from './components/CustomerDetails';
+import { Customer } from './types';
+import { mockCustomers } from './mockCustomers';
+import './styles.css';
 
-function App() {
+const App: React.FC = () => {
+  const [customers, setCustomers] = useState<Customer[]>(mockCustomers);
+  const [selectedCustomerId, setSelectedCustomerId] = useState<number | null>(1);
+
+  console.log("mockCustomers:", mockCustomers);
+  console.log("customers state:", customers);
+
+  const selectedCustomer = selectedCustomerId !== null 
+    ? customers.find(customer => customer.id === selectedCustomerId) 
+    : undefined;
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <CustomerList
+        customers={customers}
+        selectedCustomerId={selectedCustomerId}
+        onSelectCustomer={setSelectedCustomerId}
+      />
+      {selectedCustomer && <CustomerDetails customer={selectedCustomer} />}
     </div>
   );
-}
+};
 
 export default App;

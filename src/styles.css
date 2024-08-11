@@ -1,0 +1,66 @@
+.app {
+    display: flex;
+    padding: 20px;
+  }
+  
+  .customer-list {
+    width: 30%;
+    max-height: 100vh;
+    overflow-y: auto;
+    border-right: 1px solid #ccc;
+  }
+  
+  .customer-card {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .customer-card.selected {
+    background-color: #f0f0f0;
+  }
+  
+  .customer-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+    padding: 20px;
+    border: 1px solid #ddd; 
+    border-radius: 8px; 
+    background-color: #f9f9f9; 
+    max-width: 600px; 
+    margin: auto; 
+  }
+
+  .customer-details h2,
+.customer-details h4,
+.customer-details p {
+  margin: 10px 0; 
+}
+  
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+  }
+  
+  .image-grid img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .pagination-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .pagination-controls button {
+    margin: 0 10px;
+    padding: 5px 10px;
+  }
