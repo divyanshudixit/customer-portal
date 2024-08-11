@@ -1,46 +1,43 @@
-# Getting Started with Create React App
+# Customer Details Portal
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Overview
 
-## Available Scripts
+This project is a single-page application (SPA) developed using React and TypeScript. The portal provides an interface to display customer details, featuring a list of customers on the left side and detailed information about the selected customer on the right side, including a dynamic photo grid.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **Customer List**: A list of up to 1000 customers displayed on the left side of the portal.
+- **Customer Cards**: Each card in the list shows the name and title of the customer. 
+- **Customer Details**: Upon selecting a card, the customer’s name, title, address, and a 3x3 grid of photos are displayed on the right side.
+- **Dynamic Photo Grid**: The 3x3 grid of photos changes every 10 seconds, with images fetched from a public API.
+- **Highlighting**: The selected customer card is highlighted in the list.
+ ## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/yourusername/customer-portal.git
+   cd customer-portal
+   ```
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+3. **Create a .env file in the root of the project and add your API key**:
+   ```bash
+   REACT_APP_API_KEY=your_api_key_here
+   ```
+4. **Run the application**:
+   ```bash
+   npm start
+   ```
+## Usage
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Upon starting the application, you will see a list of customers on the left side.
+- Click on any customer card to view their details on the right side.
+- The 3x3 photo grid in the customer details section will refresh every 10 seconds with new images fetched from the Pexels API.
 
-### `npm test`
+## Technologies Used
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **React**: A JavaScript library for building user interfaces.
+- **TypeScript**: A typed superset of JavaScript that compiles to plain JavaScript.
+- **Pexels API**: Used to fetch random images for the photo grid.
